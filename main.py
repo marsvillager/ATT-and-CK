@@ -47,4 +47,4 @@ pd.set_option('expand_frame_repr', False)
 # show all columns
 # pd.set_option('display.max_rows', None)
 
-print(zip(df_pre) + zip(df_mob))
+print(df_pre)
