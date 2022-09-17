@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23aeb58f-c28b-4b53-8970-314c1a220ca6" name="变更" comment="format data">
+    <list default="true" id="23aeb58f-c28b-4b53-8970-314c1a220ca6" name="变更" comment="security rule samples">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -115,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663071332515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="format data">
+      <created>1663071533904</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663071533904</updated>
+    </task>
+    <task id="LOCAL-00009" summary="security rule samples">
+      <created>1663400367967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663400367967</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="formate data" />
     <MESSAGE value="format data" />
-    <option name="LAST_COMMIT_MESSAGE" value="format data" />
+    <MESSAGE value="security rule samples" />
+    <option name="LAST_COMMIT_MESSAGE" value="security rule samples" />
   </component>
 </project>
