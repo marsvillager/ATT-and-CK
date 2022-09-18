@@ -54,22 +54,28 @@ def init():
 
 def format_data(techniques):
     dict_map = {}
-    for obj in techniques:
-        if 'description' not in obj:
-            dict_map.update({obj['id']: (obj['name'], '')})
+    for technique in techniques:
+        external_id = []
+        mitre_attack = technique['external_references']
+        for obj in mitre_attack:
+            if hasattr(obj, 'external_id'):
+                external_id.append(obj.external_id)
+
+        if 'description' not in technique:
+            dict_map.update({technique['id']: (external_id, technique['name'], '')})
         else:
-            dict_map.update({obj['id']: (obj['name'], obj['description'])})
+            dict_map.update({technique['id']: (external_id, technique['name'], technique['description'])})
 
     pair = pd.DataFrame({'attack_id': dict_map.keys(), 'values': dict_map.values()})
 
     df = pd.DataFrame({'attack_id': dict_map.keys()})
-    df['attack_name'] = pair['values'].apply(lambda x: x[0])
-    df['attack_description'] = pair['values'].apply(lambda x: clean_text(x[1]))
+    df['external_id'] = pair['values'].apply(lambda x: x[0])
+    df['attack_name'] = pair['values'].apply(lambda x: x[1])
+    df['attack_description'] = pair['values'].apply(lambda x: clean_text(x[2]))
     df.dropna(inplace=True)
     return df
 
 
-# replace_dots: get rid of any extension '.'s so they are not interpreted as full-stops
 def replace_dots(text):
     try:
         ind = text.index('.')
@@ -96,9 +102,9 @@ def remove_citations(text):
     return text
 
 
-# clean up the text
 def remove_chars(text):
-    to_remove = "This technique has been deprecated. Please see ATT&CK's Initial Access and Execution tactics for replacement techniques."
+    to_remove = "This technique has been deprecated. Please see ATT&CK's Initial Access and Execution tactics for " \
+                "replacement techniques. "
     text = text.replace(to_remove, '')
     text = re.sub('<[^>]*>', '', text.lower()).strip()
     text = re.sub('[^a-zA-Z\'\_]', ' ', text.lower())

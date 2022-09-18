@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23aeb58f-c28b-4b53-8970-314c1a220ca6" name="变更" comment="security rule samples">
+    <list default="true" id="23aeb58f-c28b-4b53-8970-314c1a220ca6" name="变更" comment="format data">
+      <change afterPath="$PROJECT_DIR$/load_yml.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICS.md" beforeDir="false" afterPath="$PROJECT_DIR$/ICS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mitre ATT&amp;CK.md" beforeDir="false" afterPath="$PROJECT_DIR$/Mitre ATT&amp;CK.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/format.py" beforeDir="false" afterPath="$PROJECT_DIR$/format.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +43,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Mitre ATT&amp;CK/main.py&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/trustar-daenerys&quot;
   }
 }</component>
   <component name="RunManager">
@@ -55,6 +59,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -137,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663400367967</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="format data">
+      <created>1663400479360</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663400479360</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,8 +165,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="formate data" />
-    <MESSAGE value="format data" />
     <MESSAGE value="security rule samples" />
-    <option name="LAST_COMMIT_MESSAGE" value="security rule samples" />
+    <MESSAGE value="format data" />
+    <option name="LAST_COMMIT_MESSAGE" value="format data" />
   </component>
 </project>
