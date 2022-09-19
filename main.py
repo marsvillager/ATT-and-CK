@@ -1,4 +1,5 @@
 from format import init
+from key2key import match, calculate_weight
 from load_yml import load_file
 
 if __name__ == '__main__':
@@ -15,7 +16,7 @@ if __name__ == '__main__':
     # print(df_ics.loc[df_ics['attack_name'].str.contains('Compromise', case=False)])
 
     # 2. security rules metadata
-    key = load_file("00927_Account_Disabled_on_Windows.yml")
+    key = load_file("00929_Privilege_Assigned_on_Windows.yml")
 
     # print(key['name'])
     # print(key['remarks'])
@@ -24,5 +25,7 @@ if __name__ == '__main__':
     # print(keyword)
 
     # 3、key2key map
-    for keyword in keywords:
-        print(keyword)
+    match_list = match(df_ics, keywords)
+    rank_list = calculate_weight(match_list)
+
+    print(rank_list)
