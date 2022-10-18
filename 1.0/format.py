@@ -11,19 +11,19 @@ def init():
     filter_objects = Filter('type', '=', 'attack-pattern')
 
     # enterprise-attack
-    src_ent = FileSystemSource('./cti/enterprise-attack')
+    src_ent = FileSystemSource('../cti/enterprise-attack')
     techniques_ent = src_ent.query([filter_objects])
 
     # ics-attack
-    src_ics = FileSystemSource('./cti/ics-attack')
+    src_ics = FileSystemSource('../cti/ics-attack')
     techniques_ics = src_ics.query([filter_objects])
 
     # mobile-attack
-    src_mob = FileSystemSource('./cti/mobile-attack')
+    src_mob = FileSystemSource('../cti/mobile-attack')
     techniques_mob = src_mob.query([filter_objects])
 
     # pre-attack
-    src_pre = FileSystemSource('./cti/pre-attack')
+    src_pre = FileSystemSource('../cti/pre-attack')
     techniques_pre = src_pre.query([filter_objects])
 
     # combine src
