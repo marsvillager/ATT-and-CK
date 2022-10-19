@@ -5,15 +5,15 @@ def replace_dots(text):
     try:
         ind = text.index('.')
         while ind < len(text) - 1:
-            if not text[ind + 1:ind + 2] == ' ' and not text[ind + 1:ind + 2] == '"' and not text[
-                                                                                             ind + 1:ind + 2] == '\'':
+            if not text[ind + 1:ind + 2] == ' ' and not text[ind +
+                                                             1:ind + 2] == '"' and not text[ind + 1:ind + 2] == '\'':
                 text = text[:ind] + '_' + text[ind + 1:]
             try:
                 ind = ind + 1 + text[ind + 1:].index('.')
-            except:
+            except BaseException:
                 break
         return text
-    except:
+    except BaseException:
         return text
 
 
@@ -32,7 +32,7 @@ def remove_chars(text):
                 "replacement techniques. "
     text = text.replace(to_remove, '')
     text = re.sub('<[^>]*>', '', text.lower()).strip()
-    text = re.sub('[^a-zA-Z\'\_]', ' ', text.lower())
+    text = re.sub(r'[^a-zA-Z\'\_]', ' ', text.lower())
     return text
 
 

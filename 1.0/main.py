@@ -22,7 +22,7 @@ if __name__ == '__main__':
     # print(key['remarks'])
 
     keywords = key['name'].split(' ') + key['remarks'].split(' ')
-    # print(keyword)
+    # print(keywords)
 
     # 3、key2key map
     match_list = match(df_ics, keywords)

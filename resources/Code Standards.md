@@ -17,3 +17,7 @@ pip install autopep8
 - 工作目录：$ProjectFileDir$
 
 - 输出筛选器：$FILE_PATH$\:$LINE$\:$COLUMN$\:.*
+
+# 3、使用
+
+选中文件右击选择 External Tools 中的 autopep8，即可自动规范化代码

@@ -65,14 +65,22 @@ def format_by_level3(techniques):
 
         # in particular cases: without x_mitre_domains or description
         if 'x_mitre_domains' and 'description' not in technique:
-            dict_map.update({technique['id']: ('pre-attack', external_id, technique['name'], '')})
+            dict_map.update(
+                {technique['id']: ('pre-attack', external_id, technique['name'], '')})
         elif 'description' not in technique:
-            dict_map.update({technique['id']: (technique['x_mitre_domains'], external_id, technique['name'], '')})
-        elif 'x_mitre_domains' not in technique:
-            dict_map.update({technique['id']: ('pre-attack', external_id, technique['name'], technique['description'])})
-        else:
             dict_map.update({technique['id']: (
-                technique['x_mitre_domains'], external_id, technique['name'], technique['description'])})
+                technique['x_mitre_domains'], external_id, technique['name'], '')})
+        elif 'x_mitre_domains' not in technique:
+            dict_map.update({technique['id']: (
+                'pre-attack', external_id, technique['name'], technique['description'])})
+        else:
+            dict_map.update(
+                {
+                    technique['id']: (
+                        technique['x_mitre_domains'],
+                        external_id,
+                        technique['name'],
+                        technique['description'])})
 
     pair = pd.DataFrame({'id': dict_map.keys(), 'values': dict_map.values()})
 
