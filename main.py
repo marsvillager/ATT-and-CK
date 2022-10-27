@@ -18,6 +18,7 @@ if __name__ == '__main__':
     # print(key['remarks'])
 
     # 3. match
-    default_list = ['category', 'description', 'name', 'remarks']  # fields of security rules
+    # strategy(a) key2key and rank
+    default_list = ['category', 'name', 'remarks']  # fields of security rules
     match_list = match.key2key(attack_list, key, default_list)
     print(match.rank(match_list))

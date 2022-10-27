@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cti" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cti(ori)" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/dict/eudic-dictionary-making" vcs="Git" />
   </component>
 </project>

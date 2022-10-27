@@ -76,8 +76,9 @@ def format_by_level3(techniques: list) -> pd.DataFrame:
         external_id: list = []
         mitre_attack: list = technique['external_references']
         for obj in mitre_attack:
-            if hasattr(obj, 'external_id'):
+            if hasattr(obj, 'external_id') and "CAPEC" not in obj.external_id:  # filter CAPEC id
                 external_id.append(obj.external_id)
+                # print(str(external_id) + "   " + technique['id'])
 
         # in particular cases: without x_mitre_domains or description
         if 'x_mitre_domains' and 'description' not in technique:

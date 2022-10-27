@@ -40,7 +40,7 @@ def filter_stop_words(words: list, filer_words: list):
 
 def rank(match_list: list) -> list:
     """
-    function: sort by occurrences of attack id
+    function: sort by frequencies of attack id
     param: lis of attack id
     return: order the frequencies of attack id from highest to lowest
     """
@@ -69,6 +69,7 @@ def key2key(attack_list: pd.DataFrame, key: dict, security_rules_list: list) -> 
 
     # filter stop words
     keywords: list = filter_stop_words(keywords, filer_list)
+    print(keywords)
 
     results: list = []
     for keyword in keywords:
