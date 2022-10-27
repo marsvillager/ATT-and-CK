@@ -41,7 +41,7 @@ def filter_stop_words(words: list, filer_words: list):
 def rank(match_list: list) -> list:
     """
     function: sort by frequencies of attack id
-    param: lis of attack id
+    param: list of attack id
     return: order the frequencies of attack id from highest to lowest
     """
     # contestants
