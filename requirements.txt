@@ -2,7 +2,6 @@ antlr4-python3-runtime==4.9.3
 autopep8==1.7.0
 certifi==2022.9.24
 charset-normalizer==2.1.1
-idna==3.4
 intel-openmp==2022.2.0
 mkl==2022.2.0
 mkl-service==2.4.0

@@ -11,6 +11,7 @@ if __name__ == '__main__':
 
     # 2. read security rules
     # key = load_file("./sample/" + "00927_Account_Disabled_on_Windows.yml")
+    # key = load_file("./sample/" + "00928_Account_Enabled_on_Windows.yml")
     key = load_file("./sample/" + "15022_LoginLogoutAtUnusualTime.yml")
     # print(key['category'])
     # print(key['description'])

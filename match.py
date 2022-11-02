@@ -38,6 +38,19 @@ def filter_stop_words(words: list, filer_words: list):
     return res
 
 
+def deplicate_removal(origin_list: list) -> list:
+    """
+    function: Remove duplicate data
+    param origin_list: origin data
+    return: results without duplicate data
+    """
+    res: list = []
+    for i in origin_list:
+        if i not in res and i.title() not in res:  # case insensitive
+            res.append(i)
+    return res
+
+
 def rank(match_list: list) -> list:
     """
     function: sort by frequencies of attack id
@@ -69,6 +82,7 @@ def key2key(attack_list: pd.DataFrame, key: dict, security_rules_list: list) -> 
 
     # filter stop words
     keywords: list = filter_stop_words(keywords, filer_list)
+    keywords: list = deplicate_removal(keywords)
     print(keywords)
 
     results: list = []
@@ -84,6 +98,7 @@ def key2key(attack_list: pd.DataFrame, key: dict, security_rules_list: list) -> 
         for res in description_index.attack_id:
             for tmp in res:
                 result.append(tmp)
+        # each keyword corresponds to list of attack ids which is not repeated
         for item in tuple(set(result)):
             results.append(item)
 
