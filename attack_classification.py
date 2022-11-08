@@ -34,7 +34,7 @@ def classify_by_level1(typeof4: str) -> list:
     return: list of one type
     """
     # xxx-attack
-    src: stix2.FileSystemSource = FileSystemSource('./cti/' + typeof4 + '-attack')
+    src: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/' + typeof4 + '-attack')
 
     # filter
     filter_objects: stix2.Filter = Filter('type', '=', 'attack-pattern')
@@ -48,10 +48,10 @@ def classify_by_level2():
     return: list of all types
     """
     # all types
-    src_pre: stix2.FileSystemSource = FileSystemSource('./cti/pre-attack')
-    src_ent: stix2.FileSystemSource = FileSystemSource('./cti/enterprise-attack')
-    src_mob: stix2.FileSystemSource = FileSystemSource('./cti/mobile-attack')
-    src_ics: stix2.FileSystemSource = FileSystemSource('./cti/ics-attack')
+    src_pre: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/pre-attack')
+    src_ent: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/enterprise-attack')
+    src_mob: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/mobile-attack')
+    src_ics: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/ics-attack')
 
     # combine src
     src: stix2.CompositeDataSource = CompositeDataSource()
@@ -109,3 +109,8 @@ def format_by_level3(techniques: list) -> pd.DataFrame:
     # pd.set_option('display.max_rows', None)
 
     return df
+
+
+def attack_classification_out(typeof4: str):
+    attack_list: pd.DataFrame = format_by_level3(classify_by_level1(typeof4))
+    attack_list.to_csv("./attack_classification_out/" + typeof4 + ".csv", sep=',', index=False, header=True)

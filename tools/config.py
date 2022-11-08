@@ -30,4 +30,4 @@ domains = [
 ]
 
 # Declare file location
-directory = "out"
+directory = "mitre_attack_data"

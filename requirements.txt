@@ -3,6 +3,7 @@ autopep8==1.7.0
 certifi==2022.9.24
 charset-normalizer==2.1.1
 intel-openmp==2022.2.0
+loguru==0.6.0
 mkl==2022.2.0
 mkl-service==2.4.0
 numexpr==2.8.3
@@ -23,6 +24,3 @@ tbb==2021.7.0
 toml==0.10.2
 urllib3==1.26.12
 wincertstore==0.2
-
-loguru~=0.6.0
-yaml~=0.2.5

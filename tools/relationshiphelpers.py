@@ -6,9 +6,9 @@ from stix2 import Filter
 from tools import stixhelpers
 
 
-def get_srcs():
+def get_srcs(update: bool):
     """memory shares without domain getter"""
-    ms, srcs = stixhelpers.get_stix_memory_stores()
+    ms, srcs = stixhelpers.get_stix_memory_stores(update)
 
     return srcs
 
