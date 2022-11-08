@@ -33,11 +33,11 @@ def classify_by_level1(typeof4: str) -> list:
     param typeof4: 4 types, pre, ent, mob, ics
     return: list of one type
     """
-    # filter
-    filter_objects: stix2.Filter = Filter('type', '=', 'attack-pattern')
-
     # xxx-attack
     src: stix2.FileSystemSource = FileSystemSource('./cti/' + typeof4 + '-attack')
+
+    # filter
+    filter_objects: stix2.Filter = Filter('type', '=', 'attack-pattern')
 
     return src.query([filter_objects])
 
@@ -47,9 +47,6 @@ def classify_by_level2():
     function: classify based on level2, pre, ent, mob, ics
     return: list of all types
     """
-    # filter
-    filter_objects: stix2.Filter = Filter('type', '=', 'attack-pattern')
-
     # all types
     src_pre: stix2.FileSystemSource = FileSystemSource('./cti/pre-attack')
     src_ent: stix2.FileSystemSource = FileSystemSource('./cti/enterprise-attack')
@@ -59,6 +56,9 @@ def classify_by_level2():
     # combine src
     src: stix2.CompositeDataSource = CompositeDataSource()
     src.add_data_sources([src_pre, src_ent, src_mob, src_ics])
+
+    # filter
+    filter_objects: stix2.Filter = Filter('type', '=', 'attack-pattern')
 
     return src.query([filter_objects])
 
