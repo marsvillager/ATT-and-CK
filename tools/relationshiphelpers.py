@@ -1,14 +1,12 @@
 import json
 from itertools import chain
-
 from stix2 import Filter
-
 from tools import stixhelpers
 
 
-def get_srcs(update: bool):
+def get_srcs():
     """memory shares without domain getter"""
-    ms, srcs = stixhelpers.get_stix_memory_stores(update)
+    ms, srcs = stixhelpers.get_stix_memory_stores()
 
     return srcs
 

@@ -42,7 +42,7 @@ def download_stix_file(url, download_dir, filepath):
         exit(f"\n{url} stix bundle download was unsuccessful")
 
 
-def get_stix_memory_stores(update: bool):
+def get_stix_memory_stores():
     """This function reads the json files for each domain and creates a dict that contains the memory stores for each
     domain. """
     # suppress InsecureRequestWarning: Unverified HTTPS request is being made
@@ -58,8 +58,7 @@ def get_stix_memory_stores(update: bool):
         if domain["location"].startswith("http"):
             download_dir = Path(f"{config.directory}/stix")
             stix_filename = f"{download_dir}/{domain['name']}.json"
-            if update: # update data source
-                download_stix_file(url=domain["location"], download_dir=download_dir, filepath=stix_filename)
+            download_stix_file(url=domain["location"], download_dir=download_dir, filepath=stix_filename)
         else:
             stix_filename = domain["location"]
 

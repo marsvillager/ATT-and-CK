@@ -2,35 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23aeb58f-c28b-4b53-8970-314c1a220ca6" name="变更" comment="update">
-      <change afterPath="$PROJECT_DIR$/attack_classification_out/enterprise.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attack_classification_out/ics.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attack_classification_out/mobile.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mitre_attack_data/stix/enterprise-attack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mitre_attack_data/stix/ics-attack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mitre_attack_data/stix/mobile-attack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mitre_attack_data/stix/pre-attack.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_out/enterprise.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_out/ics.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_out/mitigation_map_technique_list.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_out/mobile.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_out/pre.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mitigation_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attack_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/attack_classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cti" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attack_classification_out/enterprise.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attack_classification_out/ics.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attack_classification_out/mobile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attack_classification_out/pre.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/load_yml.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_yml.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/df_ent.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/df_ics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/df_mob.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/df_pre.csv" beforeDir="false" afterPath="$PROJECT_DIR$/attack_classification_out/pre.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00927_Account_Disabled_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00927_Account_Disabled_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00928_Account_Enabled_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00928_Account_Enabled_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00929_Privilege_Assigned_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00929_Privilege_Assigned_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00930_Privilege_Removed_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00930_Privilege_Removed_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00931_Privilege_Use_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00931_Privilege_Use_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00932_Password_Changed_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00932_Password_Changed_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00933_Firewall_Rule_Changed_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00933_Firewall_Rule_Changed_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00934_Firewall_Rule_Added_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00934_Firewall_Rule_Added_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00935_Firewall_Rule_Deleted_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00935_Firewall_Rule_Deleted_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/00936_Audit_Log_Cleared_on_Windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/00936_Audit_Log_Cleared_on_Windows.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/15022_LoginLogoutAtUnusualTime.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_rules/15022_LoginLogoutAtUnusualTime.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special.md" beforeDir="false" afterPath="$PROJECT_DIR$/special.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.py" beforeDir="false" afterPath="$PROJECT_DIR$/match.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mitre_attack_data/cti/enterprise-attack/relationship/relationship--2610bdef-0b08-46a8-94f5-cf253f11e5fc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/relationshiphelpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/relationshiphelpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/stixhelpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/stixhelpers.py" afterDir="false" />
     </list>
@@ -73,17 +63,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ATT-and-CK&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/ATT-and-CK",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "fileTemplates"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\19686\Desktop\ATT-and-CK" />
@@ -191,6 +181,7 @@
       <workItem from="1666863077507" duration="2006000" />
       <workItem from="1667876078158" duration="2799000" />
       <workItem from="1667889060011" duration="7011000" />
+      <workItem from="1667953498278" duration="18294000" />
     </task>
     <task id="LOCAL-00001" summary="formate data">
       <created>1662627454753</created>
@@ -370,9 +361,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/mitigation_classification.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -383,7 +374,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ATT_and_CK$main.coverage" NAME="main 覆盖结果" MODIFIED="1667975681737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mitre_ATT_CK$main.coverage" NAME="main 覆盖结果" MODIFIED="1663571600551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ATT_and_CK$main.coverage" NAME="main 覆盖结果" MODIFIED="1667895739819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

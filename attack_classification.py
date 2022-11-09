@@ -23,15 +23,14 @@
 import pandas as pd
 import stix2
 from stix2 import Filter, FileSystemSource, CompositeDataSource
-
 from format_clean import clean_text
 
 
 def classify_by_level1(typeof4: str) -> list:
     """
     function: classify based on level1
-    param typeof4: 4 types, pre, ent, mob, ics
-    return: list of one type
+    :param typeof4: 4 types, pre, ent, mob, ics
+    :return: list of one type
     """
     # xxx-attack
     src: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/' + typeof4 + '-attack')
@@ -42,10 +41,10 @@ def classify_by_level1(typeof4: str) -> list:
     return src.query([filter_objects])
 
 
-def classify_by_level2():
+def classify_by_level2() -> list:
     """
     function: classify based on level2, pre, ent, mob, ics
-    return: list of all types
+    :return: list of all types
     """
     # all types
     src_pre: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/pre-attack')
@@ -66,8 +65,8 @@ def classify_by_level2():
 def format_by_level3(techniques: list) -> pd.DataFrame:
     """
     function: classify and format based on level3
-    param techniques: list based on level1 or level2
-    return: list of properties in level3
+    :param techniques: list based on level1 or level2
+    :return: list of properties in level3
     """
     # stage 1: preprocess
     dict_map: dict = {}
@@ -111,6 +110,10 @@ def format_by_level3(techniques: list) -> pd.DataFrame:
     return df
 
 
-def attack_classification_out(typeof4: str):
+def attack_classification_out(typeof4: str) -> None:
+    """
+    function: output classification of attack source data in the form of cvs
+    :param typeof4: pre-attack, enterprise-attack, mobile-attack, ics-attack
+    """
     attack_list: pd.DataFrame = format_by_level3(classify_by_level1(typeof4))
-    attack_list.to_csv("./attack_classification_out/" + typeof4 + ".csv", sep=',', index=False, header=True)
+    attack_list.to_csv("./csv_out/" + typeof4 + ".csv", sep=',', index=False, header=True)
