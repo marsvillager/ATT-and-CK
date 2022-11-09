@@ -74,7 +74,7 @@ def mitigation_map_technique_list_out(srcs: list[MemoryStore]) -> None:
     mitigation_map_technique_dict: dict = mitigation_mitigates_techniques(srcs)
     mitigation_map_technique_list: pd.DataFrame = format_data(srcs, mitigation_map_technique_dict)
 
-    if not os.path.exists('csv_out'):
-        os.mkdir('csv_out')
-    mitigation_map_technique_list.to_csv("./csv_out/mitigation_map_technique_list.csv", sep=',', index=False,
+    if not os.path.exists('../csv_out'):
+        os.mkdir('../csv_out')
+    mitigation_map_technique_list.to_csv("../csv_out/mitigation_map_technique_list.csv", sep=',', index=False,
                                          header=True)

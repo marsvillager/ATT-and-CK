@@ -23,7 +23,7 @@
 import pandas as pd
 import stix2
 from stix2 import Filter, FileSystemSource, CompositeDataSource
-from format_clean import clean_text
+from tools.format_clean import clean_text
 
 
 def classify_by_level1(typeof4: str) -> list:
@@ -47,10 +47,10 @@ def classify_by_level2() -> list:
     :return: list of all types
     """
     # all types
-    src_pre: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/pre-attack')
-    src_ent: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/enterprise-attack')
-    src_mob: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/mobile-attack')
-    src_ics: stix2.FileSystemSource = FileSystemSource('./mitre_attack_data/cti/ics-attack')
+    src_pre: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/pre-attack')
+    src_ent: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/enterprise-attack')
+    src_mob: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/mobile-attack')
+    src_ics: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/ics-attack')
 
     # combine src
     src: stix2.CompositeDataSource = CompositeDataSource()

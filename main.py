@@ -1,9 +1,8 @@
-import attack_classification
+from classification import attack_classification, mitigation_classification
 import match
-import mitigation_classification
 import pandas as pd
 from stix2 import MemoryStore
-from load_yml import load_file
+from tools.load_yml import load_file
 from tools.relationshiphelpers import mitigation_mitigates_techniques, get_srcs
 
 if __name__ == '__main__':
