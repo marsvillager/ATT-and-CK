@@ -43,7 +43,10 @@ if __name__ == '__main__':
     """
     # key: dict = load_file("./security_rules/" + "00927_Account_Disabled_on_Windows.yml")
     # key: dict = load_file("./security_rules/" + "00928_Account_Enabled_on_Windows.yml")
-    key: dict = load_file("./security_rules/" + "15022_LoginLogoutAtUnusualTime.yml")
+    # key: dict = load_file("./security_rules/" + "00929_Privilege_Assigned_on_Windows.yml")
+    # key: dict = load_file("./security_rules/" + "00930_Privilege_Removed_on_Windows.yml")
+    key: dict = load_file("./security_rules/" + "00931_Privilege_Use_on_Windows.yml")
+    # key: dict = load_file("./security_rules/" + "15022_LoginLogoutAtUnusualTime.yml")
     # print(key['category'])
     # print(key['description'])
     # print(key['name'])
@@ -56,9 +59,9 @@ if __name__ == '__main__':
 
     # additional stop words
     filer_list: list = ["(e.g.,"]
-    stop_words_list = match.get_stop_words("./resources/stop_en_words.txt") + filer_list
+    stop_words_list: list[str] = match.get_stop_words("./resources/stop_en_words.txt") + filer_list
 
-    default_list: list[str] = ['category', 'name', 'remarks', 'description']  # fields of security rules
+    default_list: list[str] = ['category', 'name', 'remarks']  # fields of security rules
     attack_match_list: list = match.attack_key2key(attack_list, key, default_list, stop_words_list)
     mitigation_match_list: list = match.mitigation_key2key(mitigation_list, key, default_list, stop_words_list)
     print(match.rank(attack_match_list))
