@@ -70,8 +70,9 @@ if __name__ == '__main__':
     print(match.rank(mitigation_match_list))
 
     """
-    4. access
+    4. assess
     """
     src: CompositeDataSource = get_all_src('./mitre_attack_data/cti')
-    # print(src)
-    print(src.query([Filter("external_references.external_id", "=", "T1156")])[0]['description'])
+    info: list = src.query([Filter("external_references.external_id", "=", "T1534")])[0]
+    print(info['name'])
+    print(info['description'])
