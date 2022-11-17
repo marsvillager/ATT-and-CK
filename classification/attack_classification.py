@@ -41,12 +41,12 @@ def classify_by_level1(typeof4: str) -> list:
     return src.query([filter_objects])
 
 
-def get_all_src():
+def get_all_src(dir: str) -> CompositeDataSource:
     # all types
-    src_pre: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/pre-attack')
-    src_ent: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/enterprise-attack')
-    src_mob: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/mobile-attack')
-    src_ics: stix2.FileSystemSource = FileSystemSource('../mitre_attack_data/cti/ics-attack')
+    src_pre: stix2.FileSystemSource = FileSystemSource(dir + '/pre-attack')
+    src_ent: stix2.FileSystemSource = FileSystemSource(dir + '/enterprise-attack')
+    src_mob: stix2.FileSystemSource = FileSystemSource(dir + '/mobile-attack')
+    src_ics: stix2.FileSystemSource = FileSystemSource(dir + '/ics-attack')
 
     # combine src
     src: stix2.CompositeDataSource = CompositeDataSource()

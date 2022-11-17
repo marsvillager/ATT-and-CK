@@ -1,7 +1,9 @@
 from classification import attack_classification, mitigation_classification
 import match
 import pandas as pd
-from stix2 import MemoryStore
+from stix2 import MemoryStore, Filter, CompositeDataSource
+
+from classification.attack_classification import get_all_src
 from tools.load_yml import load_file
 from tools.relationshiphelpers import mitigation_mitigates_techniques, get_srcs
 
@@ -45,8 +47,8 @@ if __name__ == '__main__':
     # key: dict = load_file("./security_rules/" + "00928_Account_Enabled_on_Windows.yml")
     # key: dict = load_file("./security_rules/" + "00929_Privilege_Assigned_on_Windows.yml")
     # key: dict = load_file("./security_rules/" + "00930_Privilege_Removed_on_Windows.yml")
-    key: dict = load_file("./security_rules/" + "00931_Privilege_Use_on_Windows.yml")
-    # key: dict = load_file("./security_rules/" + "15022_LoginLogoutAtUnusualTime.yml")
+    # key: dict = load_file("./security_rules/" + "00931_Privilege_Use_on_Windows.yml")
+    key: dict = load_file("./security_rules/" + "15022_LoginLogoutAtUnusualTime.yml")
     # print(key['category'])
     # print(key['description'])
     # print(key['name'])
@@ -61,8 +63,15 @@ if __name__ == '__main__':
     filer_list: list = ["(e.g.,"]
     stop_words_list: list[str] = match.get_stop_words("./resources/stop_en_words.txt") + filer_list
 
-    default_list: list[str] = ['category', 'name', 'remarks']  # fields of security rules
+    default_list: list[str] = ['category', 'name', 'remarks', 'description']  # fields of security rules
     attack_match_list: list = match.attack_key2key(attack_list, key, default_list, stop_words_list)
     mitigation_match_list: list = match.mitigation_key2key(mitigation_list, key, default_list, stop_words_list)
     print(match.rank(attack_match_list))
     print(match.rank(mitigation_match_list))
+
+    """
+    4. access
+    """
+    src: CompositeDataSource = get_all_src('./mitre_attack_data/cti')
+    # print(src)
+    print(src.query([Filter("external_references.external_id", "=", "T1156")])[0]['description'])
